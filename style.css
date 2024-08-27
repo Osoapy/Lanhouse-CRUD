@@ -1,4 +1,54 @@
-html {
-  height: 100%;
+/* IMPORTANDO FONTES */
+@font-face {
+  font-family: Garet-Heavy;
+  src: url('./Assets/Fonts/Garet-Heavy.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Garet-Book;
+  src: url('./Assets/Fonts/Garet-Book.ttf') format('truetype');
+}
+
+/* DECLARANDO VARIÁVEIS */
+:root {
+  --fonteTitulo: "Garet-Heavy", sans-serif;
+  --fontePadrao: "Garet-Book", sans-serif;
+}
+
+/* DEFININDO ESTILO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fontePadrao);
+}
+
+body {
+  width: 100vw;
+  background-color: #121212;
+  color: #FFFFFF;
+}
+
+.inicio {
+  background-image: url('./Assets/notebook.png');
+}
+
+section{
+  height: 100vh;
   width: 100%;
 }
+.ofertas{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  
+}
+
+#h1Ofertas{
+  
+}
+
+
+/* DEFININDO ANIMAÇÕES */
