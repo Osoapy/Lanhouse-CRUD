@@ -39,6 +39,15 @@ body {
 .letters {
   display: flex;
   gap: 10px;
+  align-items: center;
+}
+
+#easterImg {
+  height: 2vh;
+}
+
+.eachLetter {
+  height: fit-content;
 }
 
 .sessao {
