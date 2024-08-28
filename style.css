@@ -11,6 +11,7 @@
 
 /* DECLARANDO VARIÁVEIS */
 :root {
+  --corBotao: rgb(126, 207, 87);
   --fonteTitulo: "Garet-Heavy", sans-serif;
   --fontePadrao: "Garet-Book", sans-serif;
 }
@@ -21,13 +22,29 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--fontePadrao);
-  overflow-x: hidden;
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   background-color: #121212;
   color: #FFFFFF;
+}
+
+#easterEgg {
+  color: var(--corBotao);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: bolder;
+}
+
+.letters {
+  display: flex;
+  gap: 10px;
+}
+
+.sessao {
+  width: 100%;
 }
 
 .inicio {
@@ -37,6 +54,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: 100vh;
 }
 
 #incEsquerda {
@@ -48,25 +66,64 @@ body {
 }
 
 #incContainer {
-  width: 65%;
-  height: 85%;
+  z-index: 0;
+  display: flex;
+  width: 75%;
+  height: 90%;
+  flex-direction: column;
+  overflow: visible;
+}
+
+.mensagemPrincipal:first-of-type {
+  margin-top: 0;
 }
 
 .mensagemPrincipal {
-  font-size: 5.2rem;
+  z-index: 1;
+  overflow: visible;
+  margin-top: -33px;
+  font-size: 4.7rem;
 }
 
 #incDireita {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
   width: 50%;
   height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+a.semEstilo {
+  margin-top: 10px;
+  width: 60%;
+  height: 10%;
+  text-decoration: none;
+}
+
+.incbotao {
+  background-color: var(--corBotao);
+  height: 100%;
+  width: 100%;
+  color: black;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+}
+
+.iconeBotao {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  max-height: 30%;
+  width: auto;
 }
 
 section{
   height: 100vh;
-  width: 100%;
 }
 
 .ofertas{
@@ -75,7 +132,6 @@ section{
   display: flex;
   flex-direction: column;
   background-color: white;
-  
 }
 
 .ofertas-container{
@@ -83,36 +139,42 @@ section{
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
-  
 }
+
 .ofertas-item{
-  border: 5px solid black;
   border-radius: 20px;
-  height: 100%;
-  width: 33%;
+  height: 98%;
+  width: 33.2%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items:center;
   color: black;
-  margin-right: 10px;
-  
 }
+
 .ofertaIMG{
-  width: 100;
+  width: 100%;
   height: 50%;
-  
 }
+
+.ofAUX {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .tituloOferta{
   margin: 10px;
 }
+
 .descricaoOferta{
   width: 70%;
   font-size: 1.2rem;
-  
 }
+
 #h1Ofertas{
   padding-top: 20px;
   align-self: center;
@@ -121,8 +183,6 @@ section{
   font-size: 2rem;
   height: 20%;
   width: 90%;
-  
 }
-
 
 /* DEFININDO ANIMAÇÕES */
