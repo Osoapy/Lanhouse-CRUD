@@ -39,6 +39,10 @@ body {
 }
 
 /* Estilos do formulário */
+a {
+    color: lightblue;
+}
+
 form {
     display: flex;
     flex-direction: column;
