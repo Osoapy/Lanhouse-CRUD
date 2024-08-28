@@ -28,18 +28,38 @@ body {
   color: #FFFFFF;
 }
 
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.1); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* EASTER EGG */
 #easterEgg {
   color: var(--corBotao);
   position: absolute;
   top: 10px;
   left: 10px;
   font-weight: bolder;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .letters {
   display: flex;
   gap: 10px;
   align-items: center;
+  animation: bounceIn 1.5s ease-in-out;
 }
 
 #easterImg {
@@ -50,10 +70,7 @@ body {
   height: fit-content;
 }
 
-.sessao {
-  width: 100%;
-}
-
+/* SEÇÃO INICIAL */
 .inicio {
   display: flex;
   align-items: flex-end;
@@ -62,6 +79,7 @@ body {
   background-position: center;
   background-size: cover;
   height: 100vh;
+  animation: fadeIn 3s ease-in-out;
 }
 
 #incEsquerda {
@@ -79,6 +97,7 @@ body {
   height: 90%;
   flex-direction: column;
   overflow: visible;
+  animation: slideIn 2s ease-in-out;
 }
 
 .mensagemPrincipal:first-of-type {
@@ -116,6 +135,7 @@ a.semEstilo {
   align-items: center;
   justify-content: space-around;
   display: flex;
+  animation: bounceIn 2s ease-in-out;
 }
 
 .iconeBotao {
@@ -129,8 +149,11 @@ a.semEstilo {
   width: auto;
 }
 
-section{
+/* ANIMAÇÃO SEÇÕES */
+.sessao {
   height: 100vh;
+  width: 100%;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .unna {
@@ -138,14 +161,14 @@ section{
   text-decoration: underline;
 }
 
-.ofertas{
+.ofertas {
   width: 100%;
   display: flex;
   flex-direction: column;
   background-color: white;
 }
 
-.ofertas-container{
+.ofertas-container {
   height: 80%;
   width: 100%;
   display: flex;
@@ -154,7 +177,7 @@ section{
   align-content: center;
 }
 
-.ofertas-item{
+.ofertas-item {
   border-radius: 20px;
   height: 98%;
   width: 33.2%;
@@ -163,9 +186,10 @@ section{
   align-items: center;
   justify-items:center;
   color: black;
+  animation: slideIn 2s ease-in-out;
 }
 
-.ofertaIMG{
+.ofertaIMG {
   width: 100%;
   height: 50%;
 }
@@ -177,16 +201,16 @@ section{
   align-items: flex-start;
 }
 
-.tituloOferta{
+.tituloOferta {
   margin: 10px;
 }
 
-.descricaoOferta{
+.descricaoOferta {
   width: 70%;
   font-size: 1.2rem;
 }
 
-#h1Ofertas{
+#h1Ofertas {
   padding-top: 20px;
   align-self: center;
   margin: 0;
@@ -195,59 +219,68 @@ section{
   height: 20%;
   width: 90%;
 }
-/*pagina 2 :descriçao*/
-.descricao > h1{
+
+/* PAGINA 2: DESCRIÇÃO */
+.descricao > h1 {
   padding: 20px 0px 40px 70px;
   font-size: 2rem;
   height: 20%;
   width: 90%;
-  
+  animation: slideIn 2s ease-in-out;
 }
-.descricao > div > p{
+
+.descricao > div > p {
   padding: 0px 70px;
   font-size: 1.2rem;
 }
-.descricao > div{
+
+.descricao > div {
   display: flex;
 }
-.descricao > div > img{
+
+.descricao > div > img {
   height: 55vh;
   width: 70vh;
+  animation: fadeIn 2s ease-in-out;
 }
 
-/*pagina 4 :contato*/
-.contato > h1{
+/* PAGINA 4: CONTATO */
+.contato > h1 {
   padding: 20px 0px 90px 70px;
   font-size: 2rem;
   height: 20%;
   width: 90%;
+  animation: slideIn 2s ease-in-out;
 }
-.contato > div > p{
+
+.contato > div > p {
   font-size: 1.2rem;
-  margin:20px 0px 90px 70px ;
+  margin: 20px 0px 90px 70px;
 }
-#dadosContato{
-display: flex;
-align-items: center;
+
+#dadosContato {
+  display: flex;
+  align-items: center;
 }
-#botaoVerde{
+
+#botaoVerde {
   margin-left: 70px;
   background-color: var(--corBotao);
   color: #121212;
   display: flex;
   border: none;
-  width:350px;
+  width: 350px;
+  animation: bounceIn 1.5s ease-in-out;
 }
-#botaoVerde > img{
-height: 20px;
-width: 23px ;
-margin: 22px 15px 0px 25px;
+
+#botaoVerde > img {
+  height: 20px;
+  width: 23px;
+  margin: 22px 15px 0px 25px;
 }
-#botaoVerde > h2{
-  padding: 20px  ;
+
+#botaoVerde > h2 {
+  padding: 20px;
   text-align: center;
   font-size: 1rem;
 }
-
-
-/* DEFININDO ANIMAÇÕES */
