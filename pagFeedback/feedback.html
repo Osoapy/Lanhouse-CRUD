@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lan House Central</title>
+    <link href="../Assets/lanHouse.png" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="./feedStyle.css">
+</head>
+<body>
+    <!-- Container principal da página -->
+    <div class="feedback-container">
+        <h1 style="margin-top: 0px;">Deixe seu Feedback</h1>
+
+        <form action="https://formspree.io/f/mgvwdynl" method="POST" id="feedbackForm">
+            <!-- Nome -->
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <!-- E-mail -->
+            <div class="form-group">
+                <label for="email">E-mail (opcional):</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <!-- Avaliação -->
+            <div class="form-group">
+                <label for="avaliacao">Avaliação:</label>
+                <select id="avaliacao" name="avaliacao" required>
+                    <option value="">Selecione uma avaliação</option>
+                    <option value="Excelente">Excelente</option>
+                    <option value="Bom">Bom</option>
+                    <option value="Médio">Médio</option>
+                    <option value="Ruim">Ruim</option>
+                    <option value="Muito Ruim">Muito Ruim</option>
+                </select>
+            </div>
+
+            <!-- Comentários -->
+            <div class="form-group">
+                <label for="comentarios">Comentários:</label>
+                <textarea id="comentarios" name="comentarios" rows="5" required></textarea>
+            </div>
+
+            <!-- Enviar de forma anônima -->
+            <div class="form-group" style="display: flex; align-items: center;">
+                <input type="checkbox" id="anonimo" name="anonimo">
+                <label for="anonimo" style="margin: 0px;">Enviar de forma anônima</label>
+            </div>
+
+            <!-- Botão de envio -->
+            <button type="submit">Enviar Feedback</button>
+        </form>      
+
+        <p style="margin-bottom: 0px;">Volte <a href="../index.html">por aqui</a>!</p>
+
+        <!-- Mensagem de confirmação -->
+        <div id="mensagemConfirmacao" style="display:none;">
+            <p>Obrigado pelo seu feedback!</p>
+            <p>Volte <a href="../index.html">por aqui</a>!</p>
+        </div>
+
+        <!-- Feedbacks exibidos (opcional) -->
+        <div class="feedback-list">
+            <!-- <h2>Feedbacks Recebidos</h2>
+            // Este é um exemplo de feedback exibido
+            <div class="feedback-item">
+                <p><strong>Nome:</strong> João (Avaliação: 4)</p>
+                <p>O site é muito fácil de usar, mas poderia ter mais opções de personalização.</p>
+            </div> -->
+        </div>
+    </div>
+
+
+    <script src="feedScript.js" defer></script>
+
+</body>
+</html>

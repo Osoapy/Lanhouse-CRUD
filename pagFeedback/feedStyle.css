@@ -1,0 +1,171 @@
+/* IMPORTANDO FONTES */
+@font-face {
+  font-family: Garet-Book;
+  src: url('../Assets/Fonts/Garet-Book.ttf') format('truetype');
+}
+
+/* DECLARANDO VARIÁVEIS */
+:root {
+  --fontePadrao: "Garet-Book", sans-serif;
+}
+
+* {
+    font-family: var(--fontePadrao);
+}
+
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Letras brancas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Centraliza verticalmente */
+    line-height: 1.6; /* Melhora a legibilidade */
+    font-size: 1rem; /* Usa unidades relativas para responsividade */
+}
+
+/* Container principal da página */
+.feedback-container {
+    max-width: 90vw; /* Usa uma largura máxima relativa à viewport */
+    width: 100%;
+    padding: 2rem; /* Unidades relativas para padding */
+    background-color: #1c1c1c; /* Fundo cinza escuro para contraste */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos do formulário */
+}
+
+.form-group {
+    margin-bottom: 1rem; /* Margem inferior usando unidades relativas */
+    width: 100%;
+    max-width: 35rem; /* Largura máxima dos campos de entrada */
+    text-align: left; /* Alinha o texto do rótulo à esquerda */
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    display: block;
+    font-size: 0.9rem; /* Tamanho da fonte relativo */
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem; /* Padding relativo */
+    border: 1px solid #555; /* Borda cinza escura para contraste */
+    background-color: #222; /* Fundo cinza escuro para os campos de entrada */
+    color: #fff; /* Letras brancas */
+    border-radius: 5px;
+    font-size: 0.9rem; /* Tamanho da fonte relativo */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Adiciona transição suave para hover */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #4CAF50; /* Altera a cor da borda no foco */
+    outline: none; /* Remove o contorno padrão */
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionamento vertical */
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+/* Botão de envio */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Tamanho da fonte do botão */
+    margin-top: 1rem;
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Mensagem de confirmação */
+#mensagemConfirmacao {
+    margin-top: 1.25rem;
+    padding: 0.75rem;
+    background-color: #2d572c; /* Verde escuro */
+    border: 1px solid #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.9rem; /* Tamanho da fonte relativo */
+}
+
+/* Estilos da lista de feedbacks */
+.feedback-list {
+    margin-top: 2rem;
+}
+
+.feedback-item {
+    background-color: #333; /* Fundo cinza escuro para os feedbacks exibidos */
+    padding: 1rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem; /* Tamanho da fonte relativo */
+}
+
+/*.feedback-item p {
+    margin: 0.5rem 0;
+}*/
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .feedback-container {
+        padding: 1.5rem; /* Ajusta o padding em telas menores */
+    }
+
+    .form-group {
+        max-width: 100%; /* Permite que os campos ocupem toda a largura em telas menores */
+    }
+
+    button[type="submit"] {
+        width: 100%; /* Botão de envio ocupa toda a largura em telas menores */
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte em dispositivos muito pequenos */
+    }
+
+    .feedback-container {
+        padding: 1rem; /* Ajusta o padding para telas muito pequenas */
+    }
+
+    .form-group {
+        margin-bottom: 0.75rem; /* Reduz a margem inferior em telas muito pequenas */
+    }
+
+    button[type="submit"] {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte do botão em telas muito pequenas */
+    }
+}
