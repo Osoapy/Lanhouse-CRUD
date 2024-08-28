@@ -133,8 +133,12 @@ section{
   height: 100vh;
 }
 
+.unna {
+  color: white;
+  text-decoration: underline;
+}
+
 .ofertas{
-  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;

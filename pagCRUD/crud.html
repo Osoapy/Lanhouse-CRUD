@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lan House Central</title>
+  <link href="../Assets/lanHouse.png" rel="icon" type="image/x-icon" />
+  <link href="../style.css" rel="stylesheet" type="text/css" />
+  <link href="crud.css" rel="stylesheet" type="text/css" />
+</head>
+
+  <body>
+      <div id="accessPopup">
+          <div class="popup-content">
+              <h2>Insira a Chave de Acesso</h2>
+              <input type="password" id="accessKey" placeholder="Digite a senha">
+              <button onclick="checkAccessKey()">Acessar</button>
+              <p>Volte <a href="../index.html">por aqui</a>!</p>
+          </div>
+      </div>
+      <div class="container">
+          <h1>Lan House - Gerenciamento de Dispositivos</h1>
+          <form id="deviceForm">
+              <label for="deviceType">Tipo de Dispositivo</label>
+              <select id="deviceType" required>
+                  <option value="PC">PC</option>
+                  <option value="Xbox 360">Xbox 360</option>
+                  <option value="Xbox One">Xbox One</option>
+                  <option value="Xbox Series X">Xbox Series X</option>
+                  <option value="Playstation 2">Playstation 2</option>
+                  <option value="Playstation 4">Playstation 4</option>
+                  <option value="Playstation 5">Playstation 5</option>
+              </select>
+
+              <label for="userName">Nome do Usuário</label>
+              <input placeholder="Insira o nome do usuário" type="text" id="userName" required>
+
+              <label for="endTime">Horário de Término</label>
+              <input type="datetime-local" id="endTime" required>
+
+              <button type="submit">Adicionar Dispositivo</button>
+
+              <p>Volte <a href="../index.html">por aqui</a>!</p>
+          </form>
+
+          <table>
+              <thead>
+                  <tr>
+                      <th>Tipo de Dispositivo</th>
+                      <th>Usuário</th>
+                      <th>Horário de Término</th>
+                      <th>Ações</th>
+                  </tr>
+              </thead>
+              <tbody id="deviceTableBody"></tbody>
+          </table>
+      </div>
+
+      <script src="crud.js"></script>
+  </body>
+
+</html>
