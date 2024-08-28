@@ -182,5 +182,59 @@ section{
   height: 20%;
   width: 90%;
 }
+/*pagina 2 :descriçao*/
+.descricao > h1{
+  padding: 20px 0px 40px 70px;
+  font-size: 2rem;
+  height: 20%;
+  width: 90%;
+  
+}
+.descricao > div > p{
+  padding: 0px 70px;
+  font-size: 1.2rem;
+}
+.descricao > div{
+  display: flex;
+}
+.descricao > div > img{
+  height: 55vh;
+  width: 70vh;
+}
+
+/*pagina 4 :contato*/
+.contato > h1{
+  padding: 20px 0px 90px 70px;
+  font-size: 2rem;
+  height: 20%;
+  width: 90%;
+}
+.contato > div > p{
+  font-size: 1.2rem;
+  margin:20px 0px 90px 70px ;
+}
+#dadosContato{
+display: flex;
+align-items: center;
+}
+#botaoVerde{
+  margin-left: 70px;
+  background-color: var(--corBotao);
+  color: #121212;
+  display: flex;
+  border: none;
+  width:350px;
+}
+#botaoVerde > img{
+height: 20px;
+width: 23px ;
+margin: 22px 15px 0px 25px;
+}
+#botaoVerde > h2{
+  padding: 20px  ;
+  text-align: center;
+  font-size: 1rem;
+}
+
 
 /* DEFININDO ANIMAÇÕES */
