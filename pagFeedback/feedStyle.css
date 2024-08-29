@@ -18,6 +18,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #000; /* Fundo preto */
+    background-image: url("../Assets/feedback.png");
+    background-size: cover;
+    background-attachment: fixed;
     color: #fff; /* Letras brancas */
     display: flex;
     justify-content: center;
@@ -29,10 +32,10 @@ body {
 
 /* Container principal da página */
 .feedback-container {
-    max-width: 90vw; /* Usa uma largura máxima relativa à viewport */
+    max-width: 50vw; /* Usa uma largura máxima relativa à viewport */
     width: 100%;
     padding: 2rem; /* Unidades relativas para padding */
-    background-color: #1c1c1c; /* Fundo cinza escuro para contraste */
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo cinza escuro para contraste */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center; /* Centraliza o texto */
@@ -67,6 +70,7 @@ input[type="text"],
 input[type="email"],
 select,
 textarea {
+    height: 5%;
     width: 100%;
     padding: 0.75rem; /* Padding relativo */
     border: 1px solid #555; /* Borda cinza escura para contraste */
@@ -87,7 +91,7 @@ textarea:focus {
 }
 
 textarea {
-    resize: vertical; /* Permite redimensionamento vertical */
+    resize: none; 
 }
 
 input[type="checkbox"] {
