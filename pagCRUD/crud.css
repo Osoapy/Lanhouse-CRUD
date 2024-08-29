@@ -150,7 +150,24 @@ th, td {
 #enviar{
   height: 50px;
   width: 70%;
+  background: linear-gradient(135deg, #aa00ff, #ff33cc);
+  color: #ffffff;
+  border: 2px solid #ff33cc;
+  border-radius: 15px;
+  padding: 12px 25px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(170, 0, 255, 0.7), 0 0 20px rgba(255, 51, 204, 0.7);
 }
+#enviar-button:hover {
+  background: linear-gradient(135deg, #ff33cc, #aa00ff);
+  box-shadow: 0 0 30px rgba(255, 51, 204, 1), 0 0 30px rgba(170, 0, 255, 1);
+}
+
 #acessaBotao{
   margin-left: 10px;
   align-self: center;
