@@ -14,12 +14,12 @@
           <div class="popup-content">
               <h2>Insira a Chave de Acesso</h2>
               <input type="password" id="accessKey" placeholder="Digite a senha">
-              <button onclick="checkAccessKey()">Acessar</button>
-              <p>Volte <a href="../index.html">por aqui</a>!</p>
+              <button id="acessaBotao"onclick="checkAccessKey()">Acessar</button>
+              <p id="volte">Volte <a href="../index.html">por aqui</a>!</p>
           </div>
       </div>
       <div class="container">
-          <h1>Lan House - Gerenciamento de Dispositivos</h1>
+          <h1>Lan House<br> Gerenciamento de Dispositivos</h1>
           <form id="deviceForm">
               <label for="deviceType">Tipo de Dispositivo</label>
               <select id="deviceType" required>
@@ -38,7 +38,7 @@
               <label for="endTime">Horário de Término</label>
               <input type="datetime-local" id="endTime" required>
 
-              <button type="submit">Adicionar Dispositivo</button>
+              <button id="enviar" type="submit">Adicionar Dispositivo</button>
 
               <p>Volte <a href="../index.html">por aqui</a>!</p>
           </form>

@@ -2,21 +2,28 @@ body {
   margin: 0;
   padding: 20px;
   background-color: gray;
+  background-image: url("https://wallpapersmug.com/download/1920x1080/d162e4/retro-game-synthwave.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   
 }
 
 .container {
+  
   max-width: 800px;
   margin: 0 auto;
   background-color: #fff;
   color: black;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /*backdrop-filter: blur(5px);  isto quebra o codigo por algum motivo*/
 }
 
 h1 {
-  color: black;
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 
@@ -24,26 +31,35 @@ form {
   margin-bottom: 20px;
 }
 
-label {
+label,p {
+  width: 70%;
+  text-align: start;
+  margin-top: 10px;
+  color: #ccc;
   display: block;
   margin-bottom: 5px;
 }
 
 input, select {
-  color: black;
-  width: 100%;
+  height: 50px;
+  color: rgb(255, 255, 255);
+  width: 70%;
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  border: 1px solid #555; /* Borda cinza escura para contraste */
+  background-color: #222;
+
 }
+
 
 button {
   display: block;
   width: 100%;
   padding: 10px;
   background-color: #4CAF50;
-  color: white;
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -71,7 +87,7 @@ table, th, td {
 }
 
 th, td {
-  color: black;
+  color: rgb(255, 255, 255);
   padding: 10px;
   text-align: left;
 }
@@ -123,4 +139,25 @@ th, td {
 
 #accessPopup button:hover {
   background-color: #45a049;
+}
+
+#deviceForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+#enviar{
+  height: 50px;
+  width: 70%;
+}
+#acessaBotao{
+  margin-left: 10px;
+  align-self: center;
+  width: 93%;
+  background-color: #000000;
+}
+#volte{
+  margin-left: 12px;
+  color: black;
 }
